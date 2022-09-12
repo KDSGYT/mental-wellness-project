@@ -1,0 +1,30 @@
+<nav>
+    <div class="nav-item" id="upper-section">
+        <img src="" alt="logo" />
+        <div id="search-section">
+            <label for="search-input"><button><img src="/assets/media/navbar-icons/search.svg"
+                        alt="Search" /></button></label>
+            <input id="search-input" />
+            <button id="voice-input"><img src="/assets/media/navbar-icons/mic.svg" /></button>
+        </div>
+    </div>
+    <ul id="lower-section" class="nav-item">
+        <li class="nav-link" id="home">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+                <img  src="/assets/media/navbar-icons/home.svg" alt="Home" />Home
+            </a>
+        </li>
+        <li class="nav-link" id="advice">
+            <a routerLink="/advice" routerLinkActive="active">
+                <img src="/assets/media/navbar-icons/book.svg" alt="Book" />
+                Info & Advice
+            </a>
+        </li>
+        <li class="nav-link" id="tips">
+            <a routerLink="/tips" routerLinkActive="active">
+                <img src="/assets/media/navbar-icons/bulb.svg" alt="Bulb" />
+                Tips
+            </a>
+        </li>
+    </ul>
+</nav>
