@@ -1,1 +1,22 @@
-<p>home works!</p>
+<main>
+    <div id="hero">
+        <div id="hero-text">
+            <h1>
+                You are not alone
+            </h1>
+            <p>No matter how you are feeling or what you are experiencing, we are here to help!</p>
+        </div>
+    </div>
+    <div id="question-1">
+        <h2>How are you doing ?</h2>
+        <p>We may have some useful tips for you! Simply tell us how you are feeling.</p>
+    </div>
+    <ol id="mood-choices">
+        <li><a routerLinkActive="currentMood" routerLink="/home/good"><span>{{'&#128578;'}}</span> Good</a></li>
+        <li><a routerLinkActive="currentMood" routerLink="/home/stressed"><span>{{'&#129327;'}}</span>Stressed</a></li>
+        <li><a routerLinkActive="currentMood" routerLink="/home/lonely"><span>{{'&#128577;'}}</span> Lonely</a></li>
+        <li><a routerLinkActive="currentMood" routerLink="/home/sad"><span>{{'&#128557;'}}</span>Sad</a></li>
+        <li><a routerLinkActive="currentMood" routerLink="/home/angry"><span>{{'&#128545;'}}</span>Angry</a></li>
+    </ol>
+    <p>{{mood}}</p>
+</main>

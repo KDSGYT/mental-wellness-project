@@ -5,15 +5,20 @@ import { InfoAndAdviceComponent } from './pages/info-and-advice/info-and-advice.
 import { TipsComponent } from './pages/tips/tips.component';
 const routes: Routes = [
   {
-    path:"",
-    component:HomeComponent
-  },{
-    path:"advice",
-    component:InfoAndAdviceComponent
+    path: "",
+    // component: HomeComponent,
+    redirectTo:"home/good",
+    pathMatch:'full'
+  }, {
+    path: "home/:mood",
+    component: HomeComponent
+  }, {
+    path: "advice",
+    component: InfoAndAdviceComponent
   },
   {
-    path:"tips",
-    component:TipsComponent
+    path: "tips",
+    component: TipsComponent
   }
 ];
 

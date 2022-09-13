@@ -2,6 +2,8 @@
     <div class="nav-item" id="upper-section">
         <img src="" alt="logo" />
         <div id="search-section">
+        <!-- NOTE: need to come back later here to fix the coloring issue  -->
+
             <label for="search-input"><button><img src="/assets/media/navbar-icons/search.svg"
                         alt="Search" /></button></label>
             <input id="search-input" />
@@ -10,7 +12,7 @@
     </div>
     <ul id="lower-section" class="nav-item">
         <li class="nav-link" id="home">
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+            <a routerLink="/home/good" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
                 <img  src="/assets/media/navbar-icons/home.svg" alt="Home" />Home
             </a>
         </li>
