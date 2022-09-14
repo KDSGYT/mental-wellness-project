@@ -11,12 +11,13 @@ export class HomeComponent implements OnInit {
   constructor(private route: ActivatedRoute) {
 
   }
+
   ngOnInit(): void {
 
     // This is going to change the text shown to the user according to the user's selectiond
     this.route.params.subscribe(param => {
       this.mood = param['mood'];
-      // console.log(this.mood)
+      console.log(this.mood)
     });
   }
 

@@ -62,7 +62,7 @@ main {
             min-width: 90px;
             box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.356);
             border-radius: 5px;
-            a{
+            .mood-link{
 
                 display: block;
                 height: 100%;
@@ -71,7 +71,6 @@ main {
                 justify-content: space-evenly;
                 align-items: center;
                 font-weight: bold;                
-                // padding-left:  10%;
                 padding-right: 5%;
                 span{
                     font-size: 1.6em;
@@ -82,6 +81,21 @@ main {
             }
         }
     }   
+    #text-according-mood{
+        background-color: #D8EEFF;
+        margin: 3% 5%;
+        padding: 2%;
+        border-radius: 10px;
+        font-size: 14px;
+        box-shadow: 5px 5px 5px 2px rgba(128, 128, 128, 0.356);
+
+    }
+    #browse-topics{
+        color:#2469A6;
+        text-decoration: underline;
+        margin: 5%;
+        font-size: 14px;
+    }
 }
 // styles to apply to the mood selected by the user.
 .currentMood{

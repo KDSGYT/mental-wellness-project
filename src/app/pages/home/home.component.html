@@ -12,11 +12,55 @@
         <p>We may have some useful tips for you! Simply tell us how you are feeling.</p>
     </div>
     <ol id="mood-choices">
-        <li><a routerLinkActive="currentMood" routerLink="/home/good"><span>{{'&#128578;'}}</span> Good</a></li>
-        <li><a routerLinkActive="currentMood" routerLink="/home/stressed"><span>{{'&#129327;'}}</span>Stressed</a></li>
-        <li><a routerLinkActive="currentMood" routerLink="/home/lonely"><span>{{'&#128577;'}}</span> Lonely</a></li>
-        <li><a routerLinkActive="currentMood" routerLink="/home/sad"><span>{{'&#128557;'}}</span>Sad</a></li>
-        <li><a routerLinkActive="currentMood" routerLink="/home/angry"><span>{{'&#128545;'}}</span>Angry</a></li>
+        <li><a class="mood-link" routerLinkActive="currentMood" routerLink="/home/good"><span>{{'&#128578;'}}</span> Good</a></li>
+        <li><a class="mood-link" routerLinkActive="currentMood" routerLink="/home/stressed"><span>{{'&#129327;'}}</span>Stressed</a></li>
+        <li><a class="mood-link" routerLinkActive="currentMood" routerLink="/home/lonely"><span>{{'&#128577;'}}</span> Lonely</a></li>
+        <li><a class="mood-link" routerLinkActive="currentMood" routerLink="/home/sad"><span>{{'&#128557;'}}</span>Sad</a></li>
+        <li><a class="mood-link" routerLinkActive="currentMood" routerLink="/home/angry"><span>{{'&#128545;'}}</span>Angry</a></li>
     </ol>
-    <p>{{mood}}</p>
+    <div [ngSwitch]="mood" id="text-according-mood">
+        <div *ngSwitchCase="'good'">
+            <h3>
+                Feeling good today? That’s great news!
+            </h3>
+            <p>
+                Don’t forget to practice self-care on a regular basis.
+            </p>
+        </div>
+        <div *ngSwitchCase="'stressed'">
+            <h3>
+                Many things in life can trigger anxiety, so it is important to know how to manage your stress.
+            </h3>
+            <p>
+                Read about anxiety and ways to cope with it.
+                Having a healthy lifestyle can also help you stay strong when facing stress. Check out our tips.
+            </p>
+        </div>
+        <div *ngSwitchCase="'lonely'">
+            <h3>
+                Sometimes you may feel lonely, like nobody understands you, or you may even feel you do not understand
+                yourself.
+            </h3>
+            <p>If you have some interrogations about who you are, why you may feel different, check out our article on
+                self-identiy.
+                Sometimes one also feels lonely becuase of problems with friends and relationships. If you are in that
+                situation, check out our article on relationships.
+            </p>
+        </div>
+        <div *ngSwitchCase="'sad'">
+            <h3>
+                You are not alone
+            </h3>
+            <p>No matter how you are feeling or what you are experiencing, we are here to help!</p>
+        </div>
+        <div *ngSwitchCase="'angry'">
+            <h3>
+                You are not alone
+            </h3>
+            <p>No matter how you are feeling or what you are experiencing, we are here to help!</p>
+        </div>
+        <div *ngSwitchDefault="">
+        </div>
+    </div>
+    <a id="browse-topics" routerLink="#">Browse specific topics</a>
 </main>
