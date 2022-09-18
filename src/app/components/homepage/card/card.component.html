@@ -1,0 +1,10 @@
+<div class="card">
+    <div [ngStyle]="{'background-image': 'url('+ imgSrc + ')'}" class="upper-section">
+    <!-- <div class="upper-section"> -->
+        <!-- <img [src]="imgSrc"/> -->
+    </div>
+    <div class="lower-section" [ngStyle]="{'background-color': lowerSectionColor}">
+        <h3>{{cardHeading}}</h3>
+        <p>{{cardText}}</p>
+    </div>
+</div>
